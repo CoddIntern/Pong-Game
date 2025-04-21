@@ -38,7 +38,7 @@ def game_play():
         if ball.ycor() > (pong_game.default_y / 2 - 20) or ball.ycor() < -(pong_game.default_y / 2 - 20):
             ball.bounce_wall()
 
-        if (ball.distance(player_1) < 30 and ball.xcor() < -320) or (ball.distance(player_2) < 30 and ball.xcor() > 320):
+        if (ball.distance(player_1) < 30 and ball.xcor() < -310) or (ball.distance(player_2) < 30 and ball.xcor() > 310):
             ball.bounce_paddle()
             if sleep_value - 0.005 < 0:
                 sleep_value -= 0.005
@@ -55,7 +55,6 @@ def game_play():
 
         if player_1_score + player_2_score == 11:
             still_playing = False
-            ball.hideturtle()
             if player_1_score > player_2_score:
                 winner = "Player 1"
             else:
